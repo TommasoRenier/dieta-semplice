@@ -244,7 +244,7 @@ function slotCard(s){
   const t=slotType(day,s),id=s==='c'?day.c:day[s].id,r=id?RB[id]:null;
   const key=wkey(U.w)+'|'+U.d+'|'+s,done=!!S.done[key],ok=U.open[key];
   const label={c:'Colazione',l:'Pranzo',d:'Cena'}[s];
-  let h='<section class="slot'+(done?' done':'')+'"><div class="slot-h"><span class="lbl">'+label+'</span>'+pill(t)+'</div>';
+  let h='<section class="slot'+(done?' done':'')+'" data-t="'+t+'"><div class="slot-h"><span class="lbl">'+label+'</span>'+pill(t)+'</div>';
   if(t==='lib'){
     h+='<h3>Cena libera</h3><p class="note">Un pasto a settimana è libero, per esempio la pizza. Se la sera hai la pizza, a pranzo mangia il secondo con le verdure e lascia da parte pasta e cereali.</p>';
   }else{
